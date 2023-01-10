@@ -1,0 +1,79 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  position: relative;
+}
+
+.toggle-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 16px 12px 20px;
+  font-size: 24px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  background-color: #3066db;
+  color: #FFF;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.toggle-button:hover {
+  opacity: 0.8;
+}
+
+.toggle-button span {
+  padding-right: 8px;
+}
+
+.close-container {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  width: 24px;
+  height: 24px;
+  background: #FFF;
+  border-radius: 50%;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.close-container > button[type='button'] {
+  border: none;
+  background: transparent;
+  margin: 0;
+  font-size: 32px;
+  font-weight: 300;
+  color: #d4d4d4;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.loader-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #3066db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
