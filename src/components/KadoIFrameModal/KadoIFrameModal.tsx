@@ -46,6 +46,8 @@ const KadoIFrameModal = () => {
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
+        shouldCloseOnOverlayClick={false}
+        shouldCloseOnEsc={false}
         style={customStyles}
       >
         <div className='close-container'>
